@@ -1,69 +1,17 @@
-# Title that recommends an action
-## Subtitle describing the analysis 
+# Deploying your Dash app online
 
-**Authors**: Student1, Student2, Student3
+1. Setup account on Heroku and download Heroku CLI utility
+2. Navigate to this folder
+3. Commit this folder to Git
+4. 'heroku login' and type in your credentials
+5. 'heroku create -n [YOUR-APP-NAME]' where YOUR-APP-NAME refers to the title of your Dash app
+6. 'heroku git:remote -a [YOUR-APP-GIT-URL]' where YOUR-APP-GIT-URL refers to the Git link returned by 5.
+7. 'git push heroku master' will deploy your app to Heroku
+8. 'heroku ps:scale web=1' will create a Dyno and make your app live
 
-The contents of this repository detail an analysis of the module one project. This analysis is detailed in hopes of making the work accessible and replicable.
+If you want to make changes to your app repeat steps 2. 3. and 7.
 
+Delete the runtime.txt if you wish to run on Python 2.7.x instead of 3.6.x
 
-### Business problem:
-
-Here is where you state the business problem you were trying to solve
-
-
-### Datax
-Data can include source and high-level description (e.g. # obs)
-
-
-## Methods
-- descriptive analysis
-- choices made
-- key relevant findings from exploritory data analysis for mod 1, will be more involved in future mod
-
-## Results
-
-### Here are examples of how to embed images from your sub-folder
-
-
-#### Visual 1
-<img src="./images/visual1.png">
-
-> Sentence about visualization.
-
-#### Visual 2
-<img src="./images/visual2.png" width=70%>
-
-> Sentence about visualization.
-
-
-## Recommendations:
-
-More of your own text here
-
-
-## Limitations & Next Steps
-
-More of your own text here
-
-
-### For further information
-Please review the narrative of our analysis in [our jupyter notebook](./index.ipynb) or review our [presentation](./SampleProjectSlides.pdf)
-
-For any additional questions, please contact **email, email, email)
-
-
-##### Repository Structure:
-
-Here is where you would describe the structure of your repoistory and its contents, for exampe:
-
-```
-
-├── README.md               <- The top-level README for reviewers of this project.
-├── index.ipynb             <- narrative documentation of analysis in jupyter notebook
-├── presentation.pdf        <- pdf version of project presentation
-└── images
-    └── images               <- both sourced externally and generated from code
-└── data
-    └── 
-
-```
+Do NOT rename or delete any other file in this folder (except this README) or else your
+app will not setup properly.
